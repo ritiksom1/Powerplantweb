@@ -66,19 +66,19 @@ const ProductionOverview = () => {
       <div className="absolute bottom-0 left-0 w-full bg-gray-100 py-4 px-2 flex justify-between items-center text-center">
         <div className="flex-1">
           <p className="text-xs">Daily Production</p>
-          <p className="text-sm font-semibold">{dailyProduction} kWh</p>
+          <p className="text-sm font-semibold mt-1">{dailyProduction} kWh</p>
         </div>
         <div className="flex-1">
           <p className="text-xs">Monthly Production</p>
-          <p className="text-sm font-semibold">{monthlyProduction} kWh</p>
+          <p className="text-sm font-semibold mt-1">{monthlyProduction} kWh</p>
         </div>
         <div className="flex-1">
           <p className="text-xs">Yearly Production</p>
-          <p className="text-sm font-semibold">{yearlyProduction} kWh</p>
+          <p className="text-sm font-semibold mt-1">{yearlyProduction} kWh</p>
         </div>
         <div className="flex-1">
           <p className="text-xs">Total Production</p>
-          <p className="text-sm font-semibold">{totalProduction} kWh</p>
+          <p className="text-sm font-semibold mt-1">{totalProduction} kWh</p>
         </div>
       </div>
     </div>

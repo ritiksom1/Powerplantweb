@@ -4,14 +4,14 @@ import { MdDevices } from 'react-icons/md'; // Importing the new icon
 
 const Sidebar = () => {
   return (
-    <div className=" bg-yellow-400 w-1/6 h-full shadow-xl text-black p-4 flex flex-col justify-start  top-65">
+    <div className="bg-yellow-400 w-1/6 h-full shadow-xl text-black p-4 flex flex-col justify-start">
       <ul className="space-y-3"> {/* Adding vertical spacing between list items */}
         <li>
           <NavLink 
             to="/" 
             className={({ isActive }) => 
               isActive 
-                ? "text-black font-semibold text-xl bg-yellow-300 rounded-lg px-3 py-2 flex items-center gap-2 transition-all duration-200" // More defined styling for active state
+                ? "text-black font-semibold text-xl bg-yellow-300 rounded-lg px-3 py-2 flex items-center gap-2 transition-all duration-200" // Active state styling
                 : "text-xl hover:text-black hover:bg-yellow-500 px-3 py-2 rounded-lg flex items-center gap-2 transition-all duration-200"}
           >
             <FaTachometerAlt className="text-2xl" /> {/* Icon for Dashboard */}
