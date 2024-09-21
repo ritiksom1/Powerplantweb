@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { FaUser, FaLock, FaHome, FaIndustry } from "react-icons/fa";
-import { Link } from "react-router-dom";  // Import Link from react-router-dom
-import logo from '../assets/galologo.png'; // Adjust the path as needed
-import AdminLogin from '../Admin/AdminLogin';
+import { Link, useNavigate } from "react-router-dom";  
+import logo from '../assets/galologo.png'; 
+import axios from 'axios';
 
 const Register = () => {
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     name: "",
     address: "",
-    plantInstalledCapacity: "",
+    plantInstalled: "",
     email: "",
     password: ""
   });
@@ -18,23 +19,38 @@ const Register = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => { 
     e.preventDefault();
-    // Handle form submission
+  
+    try {
+      console.log(formData)
+      const response = await axios.post("http://localhost:3000/user/signup", formData);
+      console.log(response.data);
+
+      if (response.data.success) {
+        alert('Signup Successful!');
+        navigate('/login'); 
+      } else {
+        alert('Signup Failed: Invalid data');
+      }
+    } catch (error) {
+      console.error('There was an error!', error);
+      alert('There was an error with your request. Please try again.');
+    }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        {/* Logo */}
+       
         <div className="flex justify-center mb-6">
-          <img src={logo} alt="Logo" className="h-16 mr-8 rounded-lg" /> {/* Replace with actual logo */}
+          <img src={logo} alt="Logo" className="h-16 mr-8 rounded-lg" />
         </div>
 
-        {/* Registration Form */}
+      
         <h2 className="text-2xl font-semibold text-center mb-6">Register</h2>
         <form onSubmit={handleSubmit}>
-          {/* Name */}
+         
           <div className="mb-4">
             <label className="block text-gray-700">Name</label>
             <div className="flex items-center border rounded-md">
@@ -42,7 +58,6 @@ const Register = () => {
               <input
                 type="text"
                 name="name"
-                value={formData.name}
                 onChange={handleChange}
                 className="w-full p-2 border-none focus:outline-none"
                 placeholder="Enter your name"
@@ -51,7 +66,7 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Address */}
+         
           <div className="mb-4">
             <label className="block text-gray-700">Address</label>
             <div className="flex items-center border rounded-md">
@@ -59,7 +74,6 @@ const Register = () => {
               <input
                 type="text"
                 name="address"
-                value={formData.address}
                 onChange={handleChange}
                 className="w-full p-2 border-none focus:outline-none"
                 placeholder="Enter your address"
@@ -68,15 +82,13 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Plant Installed Capacity */}
           <div className="mb-4">
             <label className="block text-gray-700">Plant Installed Capacity</label>
             <div className="flex items-center border rounded-md">
               <FaIndustry className="text-gray-500 m-2" />
               <input
                 type="text"
-                name="plantInstalledCapacity"
-                value={formData.plantInstalledCapacity}
+                name="plantInstalled"
                 onChange={handleChange}
                 className="w-full p-2 border-none focus:outline-none"
                 placeholder="Enter plant installed capacity"
@@ -93,7 +105,6 @@ const Register = () => {
               <input
                 type="email"
                 name="email"
-                value={formData.email}
                 onChange={handleChange}
                 className="w-full p-2 border-none focus:outline-none"
                 placeholder="Enter your email"
@@ -110,7 +121,6 @@ const Register = () => {
               <input
                 type="password"
                 name="password"
-                value={formData.password}
                 onChange={handleChange}
                 className="w-full p-2 border-none focus:outline-none"
                 placeholder="Enter your password"
