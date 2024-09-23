@@ -3,7 +3,7 @@ import { FaUser, FaLock } from "react-icons/fa";
 import logo from '../assets/galologo.png'; // Adjust the path as needed
 import CustomerSign from '../customer/CustomerSign'; // Import the Register component
 
-const Login = ({ onLogin }) => {
+const AdminLogin = ({ onLogin }) => {
   const [isCustomerLogin, setIsCustomerLogin] = useState(true); // Customer login by default
   const [isRegister, setIsRegister] = useState(false); // To toggle between login and register
   const [email, setEmail] = useState('');
@@ -112,4 +112,4 @@ const Login = ({ onLogin }) => {
   );
 };
 
-export default Login;
+export default AdminLogin;
