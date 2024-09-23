@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import logo from '../assets/galologo.png'; // Adjust the path as needed
-import CustomerSign from '../customer/CustomerSign'; // Import the Register component
+
 
 const Login = ({ onLogin }) => {
   const [isCustomerLogin, setIsCustomerLogin] = useState(true); // Customer login by default
@@ -9,16 +9,32 @@ const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     const role = isCustomerLogin ? 'customer' : 'admin'; // Determine role based on the login type
     onLogin(email, password, role); // Call the onLogin function
+    try {
+      console.log(formData)
+      const response = await axios.post("http://localhost:3000/user/login", formData);
+      console.log(response.data);
+
+      if (response.data.success) {
+        alert('login Successful!');
+        navigate('/dashboard'); 
+      } else {
+        alert('Signup Failed: Invalid data');
+      }
+    } catch (error) {
+      console.error('There was an error!', error);
+      alert('There was an error with your request. Please try again.');
+    }
   };
 
-  const switchToCustomer = () => {
+  const switchToCustomer = async(e) => {
     setIsCustomerLogin(true);
     setEmail(''); // Clear email
     setPassword(''); // Clear password
+    
   };
 
   const switchToAdmin = () => {
