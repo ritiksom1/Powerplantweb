@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FaUser, FaLock, FaHome, FaIndustry } from "react-icons/fa";
 import { Link } from "react-router-dom";  // Import Link from react-router-dom
 import logo from '../assets/galologo.png'; // Adjust the path as needed
-import AdminLogin from '../Admin/AdminLogin';
 
 const Register = () => {
   const [formData, setFormData] = useState({
