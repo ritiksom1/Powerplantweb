@@ -70,7 +70,7 @@ class Monitor extends Component {
             />
             <button
               onClick={this.fetchData}
-              className={`w-20 p-2 bg-yellow-500 text-black rounded shadow-md transition duration-200 ease-in-out hover:bg-yellow-600 ${loading || !imei ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-20 p-2 bg-yellow-500 text-white rounded shadow-md transition duration-200 ease-in-out hover:bg-yellow-600 ${loading || !imei ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={loading || !imei}
             >
               {loading ? 'Loading...' : 'Send'}

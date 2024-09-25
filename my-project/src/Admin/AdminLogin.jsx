@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import logo from '../assets/galologo.png'; // Adjust the path as needed
-import CustomerSign from '../customer/CustomerSign'; // Import the Register component
+import CustomerSign from '../Customer/CustomerSign'; // Import the Register component
 
 const AdminLogin = ({ onLogin }) => {
   const [isCustomerLogin, setIsCustomerLogin] = useState(true); // Customer login by default
