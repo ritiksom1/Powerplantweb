@@ -3,7 +3,7 @@ import logo from '../assets/galologo.png'; // Adjust the path as needed
 
 const Header = ({ customerName, customerAddress, plantCapacity }) => {
   return (
-    <div className="bg-black text-yellow-400 p-4 flex justify-between items-center shadow-md sticky top-0 z-20">
+    <div className="bg-black text-yellow-400 p-4 flex justify-between items-center shadow-md sticky top-0 z-20 w-screen">
       <div className="flex items-center">
         <img src={logo} alt="Galo Solar Logo" className="h-12 mr-6 rounded-lg" />
       </div>
