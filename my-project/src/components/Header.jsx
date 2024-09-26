@@ -3,9 +3,9 @@ import logo from '../assets/galologo.png'; // Adjust the path as needed
 
 const Header = ({ customerName, customerAddress, plantCapacity }) => {
   return (
-    <div className="bg-black text-yellow-400 p-4 flex justify-between items-center shadow-md sticky top-0 z-20 w-screen">
+    <div className="bg-black text-yellow-400 p-6 flex justify-between items-center shadow-md sticky top-0 z-20">
       <div className="flex items-center">
-        <img src={logo} alt="Galo Solar Logo" className="h-12 mr-6 rounded-lg" />
+        <img src={logo} alt="Galo Solar Logo" className="h-14 mr-8 rounded-lg" />
       </div>
 
       {/* Middle section with customer details in a row */}
@@ -16,7 +16,7 @@ const Header = ({ customerName, customerAddress, plantCapacity }) => {
       </div>
 
       <div>
-        <button className="bg-yellow-400 text-black px-4 py-1 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50">
+        <button className="bg-yellow-400 text-black px-5 py-2 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50">
           Logout
         </button>
       </div>

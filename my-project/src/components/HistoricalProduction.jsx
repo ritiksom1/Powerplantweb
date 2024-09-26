@@ -80,7 +80,7 @@ const HistoricalProduction = () => {
   };
 
   return (
-    <div className="">
+    <div >
       <div className="flex justify-between mb-4">
         <div className="text-base md:text-m lg:text-m font-semibold">Historical Production</div>
         <div className="flex items-center gap-1">
