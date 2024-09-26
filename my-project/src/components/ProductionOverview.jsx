@@ -63,7 +63,7 @@ const ProductionOverview = () => {
       </div>
 
       {/* Footer (Production Values) */}
-      <div className="absolute bottom-0 left-0 w-full bg-gray-200 py-4 px-2 flex justify-between items-center text-center border-r-2 rounded-md">
+      <div className="absolute bottom-0 left-0 w-full bg-gray-200 py-6 px-2 flex justify-between items-center text-center border-r-2 rounded-md">
         <div className="flex-1">
           <p className="text-sm">Daily Production</p>
           <p className="text-sm font-semibold">{dailyProduction} kWh</p>
