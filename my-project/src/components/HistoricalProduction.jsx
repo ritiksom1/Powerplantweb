@@ -82,7 +82,7 @@ const HistoricalProduction = () => {
   return (
     <div >
       <div className="flex justify-between mb-4">
-        <div className="text-base md:text-m lg:text-m font-semibold">Historical Production</div>
+        <div className="text-base md:text-m lg:text-xl font-semibold">Historical Production</div>
         <div className="flex items-center gap-1">
           <button
             className={`px-2 py-1 rounded text-xs sm:text-xs ${selectedView === "month" ? "bg-yellow-400 text-white" : "bg-gray-200"}`}

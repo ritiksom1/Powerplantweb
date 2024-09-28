@@ -54,7 +54,7 @@ const Sidebar = () => {
                 : "text-xl hover:text-black hover:bg-yellow-500 px-3 py-2 rounded-lg flex items-center gap-2 transition-all duration-200"}
           >
             <MdDevices className="text-2xl" /> {/* Icon for Devices */}
-            Devices
+            Meter
           </NavLink>
         </li>
       </ul>

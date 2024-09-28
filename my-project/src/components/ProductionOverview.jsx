@@ -24,14 +24,14 @@ const ProductionOverview = () => {
   return (
     <div className="relative bg-white p-6 rounded-lg flex flex-col h-full">
       {/* Last Updated text at the top */}
-      <div className="absolute top-4 right-4 text-xs font-semibold text-gray-500">
+      <div className="absolute top-4 right-4 text-sm font-semibold text-gray-500">
         Last Updated: {lastUpdated}
       </div>
 
       {/* Title: Positioned at the top-left of the screen */}
-      <h3 className="absolute top-4 left-4 text-base font-semibold">
+      <h2 className="absolute top-2 left-4 text-xl font-semibold">
         Production Overview
-      </h3>
+      </h2>
 
       {/* Centered Container for Liquid Gauge and Text */}
       <div className="flex flex-col lg:flex-row justify-around items-center flex-grow mt-[-10%] lg:mt-[-10%]">
