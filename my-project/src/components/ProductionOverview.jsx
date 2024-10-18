@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LiquidGauge from "react-liquid-gauge";
 
 const ProductionOverview = () => {
-  const gaugeValue = 21.66;
+  const gaugeValue = 29.66;
   const totalProductionPower = 700; // in watts
   const installedCapacity = 6; // in kWp
   const dailyProduction = 12.13; // in kWh

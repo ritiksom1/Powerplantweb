@@ -7,18 +7,18 @@ const HistoricalProduction = () => {
 
   const [data, setData] = useState([
     { date: "1", kWh: 12.5 },
-    { date: "2", kWh: 14.3 },
-    { date: "3", kWh: 15.2 },
-    { date: "4", kWh: 10.8 },
-    { date: "5", kWh: 13.6 },
-    { date: "6", kWh: 9.5 },
-    { date: "7", kWh: 16.2 },
-    { date: "8", kWh: 8.3 },
-    { date: "9", kWh: 6.1 },
-    { date: "10", kWh: 11.4 },
-    { date: "11", kWh: 17.1 },
-    { date: "12", kWh: 12.9 },
-    { date: "13", kWh: 10.4 },
+    { date: "3", kWh: 14.3 },
+    { date: "6", kWh: 15.2 },
+    { date: "9", kWh: 10.8 },
+    { date: "12", kWh: 13.6 },
+    { date: "15", kWh: 9.5 },
+    { date: "18", kWh: 16.2 },
+    { date: "21", kWh: 8.3 },
+    { date: "24", kWh: 6.1 },
+    { date: "27", kWh: 11.4 },
+    { date: "29", kWh: 17.1 },
+    { date: "30", kWh: 12.9 },
+    { date: "31", kWh: 10.4 },
   ]);
 
   const [selectedView, setSelectedView] = useState("month"); // 'month' or 'year'
@@ -31,18 +31,20 @@ const HistoricalProduction = () => {
         // Fetch or generate data for the selected month
         setData([
           { date: "1", kWh: 12.5 },
-          { date: "2", kWh: 14.3 },
-          { date: "3", kWh: 15.2 },
-          { date: "4", kWh: 10.8 },
-          { date: "5", kWh: 13.6 },
-          { date: "6", kWh: 9.5 },
-          { date: "7", kWh: 16.2 },
-          { date: "8", kWh: 8.3 },
-          { date: "9", kWh: 6.1 },
-          { date: "10", kWh: 11.4 },
-          { date: "11", kWh: 17.1 },
-          { date: "12", kWh: 12.9 },
-          { date: "13", kWh: 10.4 },
+          { date: "3", kWh: 14.3 },
+          { date: "6", kWh: 15.2 },
+          { date: "9", kWh: 10.8 },
+          { date: "12", kWh: 13.6 },
+          { date: "15", kWh: 9.5 },
+          { date: "18", kWh: 16.2 },
+          { date: "21", kWh: 8.3 },
+          { date: "24", kWh: 6.1 },
+          { date: "27", kWh: 11.4 },
+          { date: "28", kWh: 17.1 },
+          { date: "29", kWh: 12.9 },
+          { date: "30", kWh: 10.4 },
+          { date: "31", kWh: 11.4 },
+         
         ]);
       } else {
         // Fetch or generate data for the selected year
