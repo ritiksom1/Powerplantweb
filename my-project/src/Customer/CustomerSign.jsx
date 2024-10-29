@@ -87,7 +87,7 @@ const Register = () => {
 
           {/* Email */}
           <div className="mb-4">
-            <label className="block text-gray-700">Email Kya Hai Mere dost</label>
+            <label className="block text-gray-700">Email</label>
             <div className="flex items-center border rounded-md">
               <FaUser className="text-gray-500 m-2" />
               <input
@@ -104,7 +104,7 @@ const Register = () => {
 
           {/* Password */}
           <div className="mb-4">
-            <label className="block text-gray-700">Password Kya Hai Mere dost</label>
+            <label className="block text-gray-700">Password</label>
             <div className="flex items-center border rounded-md">
               <FaLock className="text-gray-500 m-2" />
               <input

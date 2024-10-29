@@ -40,9 +40,10 @@ function App() {
       ) : (
         <div className="flex flex-col h-screen">
           <Header
-            customerName={userRole === 'customer' ? 'Kaushal' : ''}
-            customerAddress={userRole === 'customer' ? '592 chh/57 ramnagar, Haryana' : ''}
-            plantCapacity={userRole === 'customer' ? '10' : ''}
+            customerName={userRole === 'customer' ? "John Doe" : ""}
+            customerAddress={userRole === 'customer' ? "123 Solar St." : ""}
+            plantCapacity={userRole === 'customer' ? 10 : ""}
+            isAdmin={userRole === 'admin'}
           />
           <div className="flex flex-grow">
             <Sidebar />
