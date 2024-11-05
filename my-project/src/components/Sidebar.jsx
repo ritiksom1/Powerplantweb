@@ -23,7 +23,7 @@ const Sidebar = () => {
           <NavLink 
             to="/monitor" 
             className={({ isActive }) => 
-              isActive 
+              isActive  
                 ? "text-black font-semibold text-xl bg-yellow-300 rounded-lg px-3 py-2 flex items-center gap-2 transition-all duration-200"
                 : "text-xl hover:text-black hover:bg-yellow-500 px-3 py-2 rounded-lg flex items-center gap-2 transition-all duration-200"}
           >
